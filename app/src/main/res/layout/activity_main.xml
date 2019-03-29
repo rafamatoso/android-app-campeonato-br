@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_soccer_grass"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/cbf_id"
+        android:layout_width="269dp"
+        android:layout_height="177dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/ic_camp_br"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ranking_id"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="30dp"
+        android:background="@android:color/background_light"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_trophy"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cbf_id" />
+
+    <ImageView
+        android:id="@+id/calendar_id"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="100dp"
+        android:background="@android:color/background_light"
+        android:scaleType="center"
+        android:src="@drawable/ic_calendar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/ranking_id"
+        app:layout_constraintTop_toBottomOf="@+id/cbf_id" />
+
+    <ImageView
+        android:id="@+id/top_scorer_id"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/background_light"
+        android:scaleType="center"
+        android:src="@drawable/ic_soccer_ball"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ranking_id" />
+
+    <ImageView
+        android:id="@+id/top_assistant_id"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
+        android:background="@android:color/background_light"
+        android:scaleType="center"
+        android:src="@drawable/ic_soccer_boots"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/top_scorer_id"
+        app:layout_constraintTop_toBottomOf="@+id/calendar_id" />
+
+    <ImageView
+        android:id="@+id/cards_table_id"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/background_light"
+        android:scaleType="center"
+        android:src="@drawable/ic_cards_color"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/top_scorer_id" />
+
+    <ImageView
+        android:id="@+id/news_id"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="20dp"
+        android:adjustViewBounds="false"
+        android:background="@android:color/background_light"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_news"
+        app:layout_constraintStart_toEndOf="@+id/cards_table_id"
+        app:layout_constraintTop_toBottomOf="@+id/top_assistant_id" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="66dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cards_table_id"
+        app:srcCompat="@drawable/ic_cbf" />
+
+
+</android.support.constraint.ConstraintLayout>
