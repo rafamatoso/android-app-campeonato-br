@@ -4,8 +4,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ListView;
 
-import com.rm2xfbv.tabelabrasileirosa.Adapter.TeamAdapter;
-import com.rm2xfbv.tabelabrasileirosa.Model.Team;
+import com.rm2xfbv.tabelabrasileirosa.adapter.TeamAdapter;
+import com.rm2xfbv.tabelabrasileirosa.entities.TeamName;
+import com.rm2xfbv.tabelabrasileirosa.model.Team;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -27,8 +28,8 @@ public class RankingActivity extends AppCompatActivity {
 
     private ArrayList<Team> initTeamList() {
         return new ArrayList<>(Arrays.asList(
-                new Team("Sport", "10", "4", "3", "1","0", "10", "4", "6"),
-                new Team("Santa Cruz", "7", "4", "2", "1","1", "10", "4", "6"),
-                new Team("Náutico", "0", "4", "0", "0","4", "0", "4", "6")));
+                new Team(TeamName.ATHLETICO,10, 4, 3, 1,0, 10, 4, 6),
+                new Team(TeamName.ATLETICOMG,7, 4, 2, 1,1, 10, 4, 6),
+                new Team(TeamName.AVAI,0, 4, 0, 0,4, 0, 4, 6)));
     }
 }
