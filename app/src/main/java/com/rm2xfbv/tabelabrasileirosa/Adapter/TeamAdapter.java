@@ -47,12 +47,35 @@ public class TeamAdapter extends BaseAdapter {
                 view.findViewById(R.id.list_name_id);
         TextView teamPoint = (TextView)
                 view.findViewById(R.id.list_points_id);
+        TextView teamGames = (TextView)
+                view.findViewById(R.id.list_games_id);
+        TextView teamVictory = (TextView)
+                view.findViewById(R.id.list_victory_id);
+        TextView teamDraw = (TextView)
+                view.findViewById(R.id.list_draw_id);
+        TextView teamLose = (TextView)
+                view.findViewById(R.id.list_lose_id);
+        TextView teamGp = (TextView)
+                view.findViewById(R.id.list_gp_id);
+        TextView teamGc = (TextView)
+                view.findViewById(R.id.list_gc_id);
+        TextView teamSg = (TextView)
+                view.findViewById(R.id.list_sg_id);
 
         teamName.setText(t.getName());
         teamPoint.setText(t.getPoints());
+        teamGames.setText(t.getGames());
+        teamVictory.setText(t.getVictory());
+        teamDraw.setText(t.getDraw());
+        teamLose.setText(t.getLose());
+        teamGp.setText(t.getProGoals());
+        teamGc.setText(t.getAgainstGoals());
+        teamSg.setText(t.getGoalsSold());
 
         return view;
     }
+
+    // Adapter usado em casos de listView com grande complexidade de objetos
 
     /*public class TeamAdapter extends BaseAdapter {
 

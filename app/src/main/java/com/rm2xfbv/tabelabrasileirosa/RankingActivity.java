@@ -27,8 +27,8 @@ public class RankingActivity extends AppCompatActivity {
 
     private ArrayList<Team> initTeamList() {
         return new ArrayList<>(Arrays.asList(
-                new Team("Sport", "10"),
-                new Team("Santa Cruz", "6"),
-                new Team("Náutico", "2")));
+                new Team("Sport", "10", "4", "3", "1","0", "10", "4", "6"),
+                new Team("Santa Cruz", "7", "4", "2", "1","1", "10", "4", "6"),
+                new Team("Náutico", "0", "4", "0", "0","4", "0", "4", "6")));
     }
 }
