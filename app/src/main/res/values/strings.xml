@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">Campeonato Brasileiro 2019</string>
     <string name="title_activity_splash">SplashActivity</string>
+    <string name="ranking_main_text">Classificação</string>
+    <string name="table_main_text">Tabela</string>
+    <string name="top_scorer_main_text">Artilheiros</string>
+    <string name="top_assistant_main_text">Assistências</string>
+    <string name="cards_main_text">Cartões</string>
 </resources>
