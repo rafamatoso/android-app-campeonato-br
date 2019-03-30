@@ -21,7 +21,6 @@
             android:id="@+id/list_name_id"
             android:layout_width="60dp"
             android:layout_height="wrap_content"
-            android:text="Equipes"
             android:textAlignment="center"
             android:textSize="14sp" />
 

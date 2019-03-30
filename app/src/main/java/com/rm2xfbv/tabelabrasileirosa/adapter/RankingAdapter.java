@@ -64,8 +64,13 @@ public class RankingAdapter extends BaseAdapter {
         TextView teamSg = (TextView)
                 view.findViewById(R.id.list_sg_id);
 
-        teamPosition.setText(r.getPosition());
-        teamName.setText(r.getTeam().name().substring(0,3));
+        if (position == 0) {
+            teamPosition.setText("");
+            teamName.setText("");
+        } else {
+            teamPosition.setText(r.getPosition());
+            teamName.setText(r.getTeam().name().substring(0, 3));
+        }
         teamPoint.setText(r.getPoints());
         teamGames.setText(r.getGames());
         teamVictory.setText(r.getVictory());

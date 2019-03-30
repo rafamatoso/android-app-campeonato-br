@@ -14,12 +14,22 @@ public class Ranking {
     private String againstGoals;
     private String goalsSold;
 
-    // Composição -> Enum
     private Team team;
 
     public Ranking(String position, Team team, String points, String games, String victory, String draw, String lose, String proGoals, String againstGoals, String goalsSold) {
         this.position = position;
         this.team = team;
+        this.points = points;
+        this.games = games;
+        this.victory = victory;
+        this.draw = draw;
+        this.lose = lose;
+        this.proGoals = proGoals;
+        this.againstGoals = againstGoals;
+        this.goalsSold = goalsSold;
+    }
+
+    public Ranking(String points, String games, String victory, String draw, String lose, String proGoals, String againstGoals, String goalsSold) {
         this.points = points;
         this.games = games;
         this.victory = victory;
