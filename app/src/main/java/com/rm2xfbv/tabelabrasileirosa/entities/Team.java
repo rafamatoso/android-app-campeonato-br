@@ -1,7 +1,8 @@
 package com.rm2xfbv.tabelabrasileirosa.entities;
 
-public enum TeamName {
+public enum Team {
 
+    NOME,
     ATLETICOMG,
     ATHLETICO,
     AVAI,

@@ -6,29 +6,29 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-import com.rm2xfbv.tabelabrasileirosa.model.Team;
+import com.rm2xfbv.tabelabrasileirosa.model.Ranking;
 import com.rm2xfbv.tabelabrasileirosa.R;
 
 import java.util.List;
 
 public class TeamAdapter extends BaseAdapter {
 
-    private final List<Team> teams;
+    private final List<Ranking> rankings;
     private final Activity act;
 
-    public TeamAdapter(List<Team> teams, Activity act) {
-        this.teams = teams;
+    public TeamAdapter(List<Ranking> rankings, Activity act) {
+        this.rankings = rankings;
         this.act = act;
     }
 
     @Override
     public int getCount() {
-        return teams.size();
+        return rankings.size();
     }
 
     @Override
     public Object getItem(int position) {
-        return teams.get(position);
+        return rankings.get(position);
     }
 
     @Override
@@ -39,10 +39,12 @@ public class TeamAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
-        View view = act.getLayoutInflater().inflate(R.layout.list_main, parent, false);
+        View view = act.getLayoutInflater().inflate(R.layout.list_ranking, parent, false);
 
-        Team t = teams.get(position);
+        Ranking t = rankings.get(position);
 
+        TextView teamPosition = (TextView)
+                view.findViewById(R.id.list_pos_id);
         TextView teamName = (TextView)
                 view.findViewById(R.id.list_name_id);
         TextView teamPoint = (TextView)
@@ -62,15 +64,16 @@ public class TeamAdapter extends BaseAdapter {
         TextView teamSg = (TextView)
                 view.findViewById(R.id.list_sg_id);
 
-        teamName.setText(t.getName());
-        teamPoint.setText(String.valueOf(t.getPoints()));
-        teamGames.setText(String.valueOf(t.getGames()));
-        teamVictory.setText(String.valueOf(t.getVictory()));
-        teamDraw.setText(String.valueOf(t.getDraw()));
-        teamLose.setText(String.valueOf(t.getLose()));
-        teamGp.setText(String.valueOf(t.getProGoals()));
-        teamGc.setText(String.valueOf(t.getAgainstGoals()));
-        teamSg.setText(String.valueOf(t.getGoalsSold()));
+        teamPosition.setText(t.getPosition());
+        teamName.setText(t.getTeam().name().substring(0,3));
+        teamPoint.setText(t.getPoints());
+        teamGames.setText(t.getGames());
+        teamVictory.setText(t.getVictory());
+        teamDraw.setText(t.getDraw());
+        teamLose.setText(t.getLose());
+        teamGp.setText(t.getProGoals());
+        teamGc.setText(t.getAgainstGoals());
+        teamSg.setText(t.getGoalsSold());
 
         return view;
     }
