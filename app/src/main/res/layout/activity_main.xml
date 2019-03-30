@@ -9,9 +9,9 @@
 
     <ImageView
         android:id="@+id/cbf_id"
-        android:layout_width="211dp"
-        android:layout_height="177dp"
-        android:layout_marginTop="35dp"
+        android:layout_width="208dp"
+        android:layout_height="156dp"
+        android:layout_marginTop="50dp"
         android:src="@drawable/ic_camp_br"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -11,12 +11,12 @@ import com.rm2xfbv.tabelabrasileirosa.R;
 
 import java.util.List;
 
-public class TeamAdapter extends BaseAdapter {
+public class RankingAdapter extends BaseAdapter {
 
     private final List<Ranking> rankings;
     private final Activity act;
 
-    public TeamAdapter(List<Ranking> rankings, Activity act) {
+    public RankingAdapter(List<Ranking> rankings, Activity act) {
         this.rankings = rankings;
         this.act = act;
     }
@@ -41,7 +41,7 @@ public class TeamAdapter extends BaseAdapter {
 
         View view = act.getLayoutInflater().inflate(R.layout.list_ranking, parent, false);
 
-        Ranking t = rankings.get(position);
+        Ranking r = rankings.get(position);
 
         TextView teamPosition = (TextView)
                 view.findViewById(R.id.list_pos_id);
@@ -64,16 +64,16 @@ public class TeamAdapter extends BaseAdapter {
         TextView teamSg = (TextView)
                 view.findViewById(R.id.list_sg_id);
 
-        teamPosition.setText(t.getPosition());
-        teamName.setText(t.getTeam().name().substring(0,3));
-        teamPoint.setText(t.getPoints());
-        teamGames.setText(t.getGames());
-        teamVictory.setText(t.getVictory());
-        teamDraw.setText(t.getDraw());
-        teamLose.setText(t.getLose());
-        teamGp.setText(t.getProGoals());
-        teamGc.setText(t.getAgainstGoals());
-        teamSg.setText(t.getGoalsSold());
+        teamPosition.setText(r.getPosition());
+        teamName.setText(r.getTeam().name().substring(0,3));
+        teamPoint.setText(r.getPoints());
+        teamGames.setText(r.getGames());
+        teamVictory.setText(r.getVictory());
+        teamDraw.setText(r.getDraw());
+        teamLose.setText(r.getLose());
+        teamGp.setText(r.getProGoals());
+        teamGc.setText(r.getAgainstGoals());
+        teamSg.setText(r.getGoalsSold());
 
         return view;
     }

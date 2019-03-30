@@ -8,6 +8,6 @@ public class CardsTableActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cards_table);
+        setContentView(R.layout.activity_cards);
     }
 }

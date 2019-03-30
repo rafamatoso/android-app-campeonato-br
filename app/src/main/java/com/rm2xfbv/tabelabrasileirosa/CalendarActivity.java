@@ -16,7 +16,7 @@ public class CalendarActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_list2);
+        setContentView(R.layout.activity_list_table);
 
         ArrayList<Table> tables = initTableList();
 

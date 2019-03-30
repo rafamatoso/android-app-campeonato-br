@@ -4,7 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ListView;
 
-import com.rm2xfbv.tabelabrasileirosa.adapter.TeamAdapter;
+import com.rm2xfbv.tabelabrasileirosa.adapter.RankingAdapter;
 import com.rm2xfbv.tabelabrasileirosa.entities.Team;
 import com.rm2xfbv.tabelabrasileirosa.model.Ranking;
 
@@ -16,13 +16,13 @@ public class RankingActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_list);
+        setContentView(R.layout.activity_list_ranking);
 
         ArrayList<Ranking> rankings = initTeamRankingList();
 
         ListView teamList = (ListView) findViewById(R.id.activity_main_id);
 
-        TeamAdapter adapter = new TeamAdapter(rankings, this);
+        RankingAdapter adapter = new RankingAdapter(rankings, this);
         teamList.setAdapter(adapter);
     }
 
