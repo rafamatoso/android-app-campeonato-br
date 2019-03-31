@@ -4,20 +4,20 @@ import com.rm2xfbv.tabelabrasileirosa.entities.TeamName;
 
 public class Ranking implements Comparable<Ranking> {
 
-    private String position;
-    private String points;
-    private String games;
-    private String victory;
-    private String draw;
-    private String lose;
-    private String proGoals;
-    private String againstGoals;
-    private String goalsSold;
+    //private int position;
+    private int points;
+    private int games;
+    private int victory;
+    private int draw;
+    private int lose;
+    private int proGoals;
+    private int againstGoals;
+    private int goalsSold;
+    private String[] rankingFields;
 
     private TeamName teamName;
 
-    public Ranking(String position, TeamName teamName, String points, String games, String victory, String draw, String lose, String proGoals, String againstGoals, String goalsSold) {
-        this.position = position;
+    public Ranking(TeamName teamName, int points, int games, int victory, int draw, int lose, int proGoals, int againstGoals, String[] rankingFields) {
         this.teamName = teamName;
         this.points = points;
         this.games = games;
@@ -26,129 +26,109 @@ public class Ranking implements Comparable<Ranking> {
         this.lose = lose;
         this.proGoals = proGoals;
         this.againstGoals = againstGoals;
-        this.goalsSold = goalsSold;
+        this.goalsSold = proGoals - againstGoals;
+        this.rankingFields = rankingFields;
     }
 
-    public Ranking(String points, String games, String victory, String draw, String lose, String proGoals, String againstGoals, String goalsSold) {
-        this.points = points;
-        this.games = games;
-        this.victory = victory;
-        this.draw = draw;
-        this.lose = lose;
-        this.proGoals = proGoals;
-        this.againstGoals = againstGoals;
-        this.goalsSold = goalsSold;
+    public Ranking(String[] rankingFields) {
+        this.rankingFields = rankingFields;
     }
 
     public Ranking() {
-    }
-
-    public String getPosition() {
-        return position;
     }
 
     public TeamName getTeamName() {
         return teamName;
     }
 
-    public String getPoints() {
+    public int getPoints() {
         return points;
     }
 
-    public String getGames() {
+    public int getGames() {
         return games;
     }
 
-    public String getVictory() {
+    public int getVictory() {
         return victory;
     }
 
-    public String getDraw() {
+    public int getDraw() {
         return draw;
     }
 
-    public String getLose() {
+    public int getLose() {
         return lose;
     }
 
-    public String getProGoals() {
+    public int getProGoals() {
         return proGoals;
     }
 
-    public String getAgainstGoals() {
+    public int getAgainstGoals() {
         return againstGoals;
     }
 
-    public String getGoalsSold() {
+    public int getGoalsSold() {
         return goalsSold;
+    }
+
+    public String[] getRankingFields() {
+        return rankingFields;
     }
 
     @Override
     public int compareTo(Ranking o) {
-        if (o.getPoints().equals("      P") || Integer.parseInt(this.points) == Integer.parseInt(o.getPoints())) {
-            if (o.getGames().equals("    J") ||Integer.parseInt(this.games) == Integer.parseInt(o.getGames())) {
-                if (o.getVictory().equals("  V") ||Integer.parseInt(this.victory) == Integer.parseInt(o.getVictory())) {
-                    if (o.getDraw().equals("   E") ||Integer.parseInt(this.draw) == Integer.parseInt(o.getDraw())) {
-                        if (o.getLose().equals("   D") ||Integer.parseInt(this.lose) == Integer.parseInt(o.getLose())) {
-                            if (o.getProGoals().equals("  GP") ||Integer.parseInt(this.proGoals) == Integer.parseInt(o.getProGoals())) {
-                                if (o.getAgainstGoals().equals("GC") ||Integer.parseInt(this.againstGoals) == Integer.parseInt(o.getAgainstGoals())) {
-                                    if (o.getGoalsSold().equals("SG") ||Integer.parseInt(this.goalsSold) == Integer.parseInt(o.getGoalsSold())) {
+
+        boolean c1 = o.getRankingFields()[0].equals("      P") || this.points == o.getPoints(),
+                c2 = o.getRankingFields()[1].equals("    J")   || this.games == o.getGames(),
+                c3 = o.getRankingFields()[2].equals("  V")     || this.victory == o.getVictory(),
+                c4 = o.getRankingFields()[3].equals("   E")    || this.draw == o.getDraw(),
+                c5 = o.getRankingFields()[4].equals("   D")    || this.lose == o.getLose(),
+                c6 = o.getRankingFields()[5].equals("  GP")    || this.proGoals == o.getProGoals(),
+                c7 = o.getRankingFields()[6].equals("GC")      || this.againstGoals == o.getAgainstGoals(),
+                c8 = o.getRankingFields()[7].equals("SG")      || this.goalsSold == o.getGoalsSold(),
+                r1 = this.points > o.getPoints(),
+                r2 = this.games > o.getGames(),
+                r3 = this.victory > o.getVictory(),
+                r4 = this.draw > o.getDraw(),
+                r5 = this.lose > o.getLose(),
+                r6 = this.proGoals > o.getProGoals(),
+                r7 = this.againstGoals > o.getAgainstGoals(),
+                r8 = this.goalsSold > o.getGoalsSold();
+
+        if (c1) {
+            if (c2) {
+                if (c3) {
+                    if (c4) {
+                        if (c5) {
+                            if (c6) {
+                                if (c7) {
+                                    if (c8) {
                                         return 0;
                                     } else {
-                                        if (Integer.parseInt(this.goalsSold) > Integer.parseInt(o.getGoalsSold())) {
-                                            return -1;
-                                        } else {
-                                            return 1;
-                                        }
+                                        return (r8) ? -1 : 1;
                                     }
                                 } else {
-                                    if (Integer.parseInt(this.againstGoals) > Integer.parseInt(o.getAgainstGoals())) {
-                                        return 1;
-                                    } else {
-                                        return -1;
-                                    }
+                                    return (r7) ? 1 : -1;
                                 }
                             } else {
-                                if (Integer.parseInt(this.proGoals) > Integer.parseInt(o.getProGoals())) {
-                                    return -1;
-                                } else {
-                                    return 1;
-                                }
+                                return (r6) ? -1 : 1;
                             }
                         } else {
-                            if (Integer.parseInt(this.lose) > Integer.parseInt(o.getLose())) {
-                                return 1;
-                            } else {
-                                return -1;
-                            }
+                            return (r5) ? 1 : -1;
                         }
                     } else {
-                        if (Integer.parseInt(this.draw) > Integer.parseInt(o.getDraw())) {
-                            return -1;
-                        } else {
-                            return 1;
-                        }
+                        return (r4) ? -1 : 1;
                     }
                 } else {
-                    if (Integer.parseInt(this.victory) > Integer.parseInt(o.getVictory())) {
-                        return -1;
-                    } else {
-                        return 1;
-                    }
+                    return (r3) ? -1 : 1;
                 }
             } else {
-                if (Integer.parseInt(this.games) > Integer.parseInt(o.getGames())) {
-                    return -1;
-                } else {
-                    return 1;
-                }
+                return (r2) ? 1 : -1;
             }
         } else {
-            if (Integer.parseInt(this.points) > Integer.parseInt(o.getPoints())) {
-                return -1;
-            } else {
-                return  1;
-            }
+            return (r1) ? -1 : 1;
         }
     }
 }

@@ -62,29 +62,44 @@ public class RankingAdapter extends BaseAdapter {
                 view.findViewById(R.id.list_draw_id);
         TextView teamLose = (TextView)
                 view.findViewById(R.id.list_lose_id);
-        TextView teamGp = (TextView)
+        TextView teamProGoals = (TextView)
                 view.findViewById(R.id.list_gp_id);
-        TextView teamGc = (TextView)
+        TextView teamAgainstGoals = (TextView)
                 view.findViewById(R.id.list_gc_id);
-        TextView teamSg = (TextView)
+        TextView teamGoalsSold = (TextView)
                 view.findViewById(R.id.list_sg_id);
 
         if (position == 0) {
             teamPosition.setText("");
             teamName.setText("");
+            teamPoint.setText("  P");
+            teamGames.setText(" J");
+            teamVictory.setText("  V");
+            teamDraw.setText("  E");
+            teamLose.setText("  D");
+            teamProGoals.setText(" GP");
+            teamAgainstGoals.setText("GC");
+            teamGoalsSold.setText("SG");
         } else {
-            teamPosition.setText(Integer.toString(position));
+            teamPosition.setText(convertToString(position));
             teamName.setText(r.getTeamName().name().substring(0, 3));
+            teamPoint.setText(convertToString(r.getPoints()));
+            teamGames.setText(convertToString(r.getGames()));
+            teamVictory.setText(convertToString(r.getVictory()));
+            teamDraw.setText(convertToString(r.getDraw()));
+            teamLose.setText(convertToString(r.getLose()));
+            teamProGoals.setText(convertToString(r.getProGoals()));
+            teamAgainstGoals.setText(convertToString(r.getAgainstGoals()));
+            teamGoalsSold.setText(convertToString(r.getGoalsSold()));
         }
-        teamPoint.setText(r.getPoints());
-        teamGames.setText(r.getGames());
-        teamVictory.setText(r.getVictory());
-        teamDraw.setText(r.getDraw());
-        teamLose.setText(r.getLose());
-        teamGp.setText(r.getProGoals());
-        teamGc.setText(r.getAgainstGoals());
-        teamSg.setText(r.getGoalsSold());
-
         return view;
+    }
+
+    private String convertToString(int i) {
+        if (i >= 0 && i < 10) {
+            return String.format("  %s", Integer.toString(i));
+        } else {
+            return Integer.toString(i);
+        }
     }
 }

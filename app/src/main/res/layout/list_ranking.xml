@@ -13,14 +13,14 @@
         <LinearLayout
             android:id="@+id/linear2_id"
             android:layout_width="match_parent"
-            android:layout_height="29dp"
+            android:layout_height="31dp"
             android:background="@drawable/bg_soccer_grass"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/list_pos_id"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="26dp"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="Pos"
                 android:textAlignment="center"
@@ -29,16 +29,16 @@
 
             <TextView
                 android:id="@+id/list_name_id"
-                android:layout_width="60dp"
+                android:layout_width="45dp"
                 android:layout_height="match_parent"
                 android:textAlignment="center"
                 android:textColor="@color/textRanking"
-                android:textSize="14sp" />
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/list_points_id"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="25dp"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="P"
                 android:textAlignment="center"
@@ -47,8 +47,8 @@
 
             <TextView
                 android:id="@+id/list_games_id"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="25dp"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="J"
                 android:textAlignment="center"
@@ -57,8 +57,8 @@
 
             <TextView
                 android:id="@+id/list_victory_id"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="25dp"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="V"
                 android:textAlignment="center"
@@ -67,8 +67,8 @@
 
             <TextView
                 android:id="@+id/list_draw_id"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="25dp"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="E"
                 android:textAlignment="center"
@@ -77,8 +77,8 @@
 
             <TextView
                 android:id="@+id/list_lose_id"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="25dp"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="D"
                 android:textAlignment="center"
@@ -87,8 +87,8 @@
 
             <TextView
                 android:id="@+id/list_gp_id"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="25dp"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="GP"
                 android:textAlignment="center"
@@ -97,8 +97,8 @@
 
             <TextView
                 android:id="@+id/list_gc_id"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="25dp"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="GC"
                 android:textAlignment="center"
@@ -107,8 +107,8 @@
 
             <TextView
                 android:id="@+id/list_sg_id"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="25dp"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="SG"
                 android:textAlignment="center"
