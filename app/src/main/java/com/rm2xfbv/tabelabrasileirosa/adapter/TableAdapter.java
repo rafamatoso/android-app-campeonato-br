@@ -52,8 +52,8 @@ public class TableAdapter extends BaseAdapter {
         TextView teamHour = (TextView)
                 view.findViewById(R.id.list_hour_id);
 
-        teamName1.setText(t.getTeam1().name());
-        teamName2.setText(t.getTeam2().name());
+        teamName1.setText(t.getTeamName1().name());
+        teamName2.setText(t.getTeamName2().name());
         teamDate.setText(t.getGameDate());
         teamHour.setText(t.getGameHour());
 

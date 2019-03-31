@@ -1,27 +1,27 @@
 package com.rm2xfbv.tabelabrasileirosa.model;
 
-import com.rm2xfbv.tabelabrasileirosa.entities.Team;
+import com.rm2xfbv.tabelabrasileirosa.entities.TeamName;
 
 public class Table {
 
-    private Team team1;
-    private Team team2;
+    private TeamName teamName1;
+    private TeamName teamName2;
     private String gameDate;
     private String gameHour;
 
-    public Table(Team team1, Team team2, String gameDate, String gameHour) {
-        this.team1 = team1;
-        this.team2 = team2;
+    public Table(TeamName teamName1, TeamName teamName2, String gameDate, String gameHour) {
+        this.teamName1 = teamName1;
+        this.teamName2 = teamName2;
         this.gameDate = gameDate;
         this.gameHour = gameHour;
     }
 
-    public Team getTeam1() {
-        return team1;
+    public TeamName getTeamName1() {
+        return teamName1;
     }
 
-    public Team getTeam2() {
-        return team2;
+    public TeamName getTeamName2() {
+        return teamName2;
     }
 
     public String getGameDate() {

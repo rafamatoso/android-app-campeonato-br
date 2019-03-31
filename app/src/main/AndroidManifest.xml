@@ -13,7 +13,7 @@
         <activity android:name=".CardsTableActivity" />
         <activity android:name=".TopAssistantActivity" />
         <activity android:name=".TopScorerActivity" />
-        <activity android:name=".CalendarActivity" />
+        <activity android:name=".TableActivity" />
         <activity android:name=".RankingActivity" />
         <activity android:name=".MainActivity">
             </activity> <activity android:name=".SplashActivity">

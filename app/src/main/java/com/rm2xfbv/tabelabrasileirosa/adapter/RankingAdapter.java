@@ -9,6 +9,7 @@ import android.widget.TextView;
 import com.rm2xfbv.tabelabrasileirosa.model.Ranking;
 import com.rm2xfbv.tabelabrasileirosa.R;
 
+import java.util.Collections;
 import java.util.List;
 
 public class RankingAdapter extends BaseAdapter {
@@ -41,6 +42,10 @@ public class RankingAdapter extends BaseAdapter {
 
         View view = act.getLayoutInflater().inflate(R.layout.list_ranking, parent, false);
 
+        if (position > 0) {
+            Collections.sort(rankings);
+        }
+
         Ranking r = rankings.get(position);
 
         TextView teamPosition = (TextView)
@@ -68,8 +73,8 @@ public class RankingAdapter extends BaseAdapter {
             teamPosition.setText("");
             teamName.setText("");
         } else {
-            teamPosition.setText(r.getPosition());
-            teamName.setText(r.getTeam().name().substring(0, 3));
+            teamPosition.setText(Integer.toString(position));
+            teamName.setText(r.getTeamName().name().substring(0, 3));
         }
         teamPoint.setText(r.getPoints());
         teamGames.setText(r.getGames());
