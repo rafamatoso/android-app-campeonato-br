@@ -11,14 +11,16 @@
 
         <TextView
             android:id="@+id/list_teamName1_id"
-            android:layout_width="wrap_content"
+            android:layout_width="90sp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:paddingLeft="5sp"
             android:text="Team 1"
-            android:textAlignment="center" />
+            android:textAlignment="textStart" />
 
         <TextView
-            android:layout_width="wrap_content"
+            android:id="@+id/list_versus_id"
+            android:layout_width="5sp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="X"
@@ -26,11 +28,11 @@
 
         <TextView
             android:id="@+id/list_teamName2_id"
-            android:layout_width="wrap_content"
+            android:layout_width="90sp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Team 2"
-            android:textAlignment="center" />
+            android:textAlignment="textStart" />
 
         <TextView
             android:id="@+id/list_date_id"

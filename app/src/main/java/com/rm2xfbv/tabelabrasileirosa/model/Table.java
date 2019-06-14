@@ -2,6 +2,9 @@ package com.rm2xfbv.tabelabrasileirosa.model;
 
 import com.rm2xfbv.tabelabrasileirosa.entities.TeamName;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class Table {
 
     private TeamName teamName1;
@@ -30,5 +33,19 @@ public class Table {
 
     public String getGameHour() {
         return gameHour;
+    }
+
+    public static ArrayList<Table> initTableList() {
+        return new ArrayList<>(Arrays.asList(
+                new Table(TeamName.GREMIO, TeamName.SANTOS, "27/04/2019", "16:00"),
+                new Table(TeamName.CRUZEIRO, TeamName.BAHIA, "02/05/2019", "22:00"),
+                new Table(TeamName.CORINTHIANS, TeamName.CEARA, "10/05/2019", "16:00"),
+                new Table(TeamName.ATHLETICO, TeamName.BOTAFOGO, "17/05/2019", "22:00"),
+                new Table(TeamName.ATLETICOMG, TeamName.AVAI, "22/05/2019", "16:00"),
+                new Table(TeamName.CHAPECOENSE, TeamName.CSA, "27/05/2019", "22:00"),
+                new Table(TeamName.FLAMENGO, TeamName.FLUMINENSE, "02/06/2019", "16:00"),
+                new Table(TeamName.FORTALEZA, TeamName.GOIAS, "10/06/2019", "22:00"),
+                new Table(TeamName.INTERNACIONAL, TeamName.PALMEIRAS, "17/06/2019", "16:00"),
+                new Table(TeamName.SAOPAULO, TeamName.VASCO, "22/06/2019", "22:00")));
     }
 }

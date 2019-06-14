@@ -1,7 +1,9 @@
-package com.rm2xfbv.tabelabrasileirosa;
+package com.rm2xfbv.tabelabrasileirosa.view;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.rm2xfbv.tabelabrasileirosa.R;
 
 public class TopAssistantActivity extends AppCompatActivity {
 

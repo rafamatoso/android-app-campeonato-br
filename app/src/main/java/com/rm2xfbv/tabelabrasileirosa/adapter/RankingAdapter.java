@@ -48,26 +48,16 @@ public class RankingAdapter extends BaseAdapter {
 
         Ranking r = rankings.get(position);
 
-        TextView teamPosition = (TextView)
-                view.findViewById(R.id.list_pos_id);
-        TextView teamName = (TextView)
-                view.findViewById(R.id.list_name_id);
-        TextView teamPoint = (TextView)
-                view.findViewById(R.id.list_points_id);
-        TextView teamGames = (TextView)
-                view.findViewById(R.id.list_games_id);
-        TextView teamVictory = (TextView)
-                view.findViewById(R.id.list_victory_id);
-        TextView teamDraw = (TextView)
-                view.findViewById(R.id.list_draw_id);
-        TextView teamLose = (TextView)
-                view.findViewById(R.id.list_lose_id);
-        TextView teamProGoals = (TextView)
-                view.findViewById(R.id.list_gp_id);
-        TextView teamAgainstGoals = (TextView)
-                view.findViewById(R.id.list_gc_id);
-        TextView teamGoalsSold = (TextView)
-                view.findViewById(R.id.list_sg_id);
+        TextView teamPosition = (TextView) view.findViewById(R.id.list_pos_id);
+        TextView teamName = (TextView) view.findViewById(R.id.list_name_id);
+        TextView teamPoint = (TextView) view.findViewById(R.id.list_points_id);
+        TextView teamGames = (TextView) view.findViewById(R.id.list_games_id);
+        TextView teamVictory = (TextView) view.findViewById(R.id.list_victory_id);
+        TextView teamDraw = (TextView) view.findViewById(R.id.list_draw_id);
+        TextView teamLose = (TextView) view.findViewById(R.id.list_lose_id);
+        TextView teamProGoals = (TextView) view.findViewById(R.id.list_gp_id);
+        TextView teamAgainstGoals = (TextView) view.findViewById(R.id.list_gc_id);
+        TextView teamGoalsSold = (TextView) view.findViewById(R.id.list_sg_id);
 
         if (position == 0) {
             teamPosition.setText("");
