@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.widget.ListView;
 
 import com.rm2xfbv.tabelabrasileirosa.R;
-import com.rm2xfbv.tabelabrasileirosa.adapter.TableAdapter;
+import com.rm2xfbv.tabelabrasileirosa.viewmodel.TableAdapter;
 import com.rm2xfbv.tabelabrasileirosa.model.Table;
 
 import java.util.ArrayList;
